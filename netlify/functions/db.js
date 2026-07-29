@@ -82,7 +82,7 @@ export default async (request) => {
     session = verifySessionToken(token)
   } catch (err) {
     console.error('[db function] erro ao verificar sessão:', err)
-    return new Response(JSON.stringify({ error: 'Erro interno', debug: err.message }), { status: 500 })
+    return new Response(JSON.stringify({ error: 'Erro interno' }), { status: 500 })
   }
 
   if (rule.policy === 'admin') {
@@ -114,7 +114,7 @@ export default async (request) => {
     )
   } catch (err) {
     console.error('[db function] erro ao executar consulta:', err)
-    return new Response(JSON.stringify({ error: 'Erro interno', debug: err.message }), { status: 500 })
+    return new Response(JSON.stringify({ error: 'Erro interno' }), { status: 500 })
   }
 }
 

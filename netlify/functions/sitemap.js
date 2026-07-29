@@ -39,8 +39,8 @@ export default async (request, context) => {
   const today = new Date().toISOString().split('T')[0]
   let articles = []
 
-  const tursoUrl = process.env.VITE_TURSO_URL
-  const tursoAuthToken = process.env.VITE_TURSO_AUTH_TOKEN
+  const tursoUrl = process.env.TURSO_URL
+  const tursoAuthToken = process.env.TURSO_AUTH_TOKEN
 
   if (tursoUrl && tursoAuthToken) {
     try {
@@ -54,7 +54,7 @@ export default async (request, context) => {
       console.error('[sitemap function] Erro ao buscar artigos no Turso:', err.message)
     }
   } else {
-    console.warn('[sitemap function] VITE_TURSO_URL / VITE_TURSO_AUTH_TOKEN não configurados nas env vars da Netlify.')
+    console.warn('[sitemap function] TURSO_URL / TURSO_AUTH_TOKEN não configurados nas env vars da Netlify.')
   }
 
   const staticEntries = STATIC_PAGES.map((p) =>
