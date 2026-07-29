@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /perfil
+Disallow: /api/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Disallow: /perfil
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+Disallow: /perfil
+
+Sitemap: https://www.skateset.com.br/sitemap.xml

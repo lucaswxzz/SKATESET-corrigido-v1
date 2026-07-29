@@ -1,0 +1,26 @@
+# Dependências (geradas pelo npm/yarn — não sobem pro Git)
+node_modules/
+
+# Build (gerado pelo vite build — a Netlify gera isso sozinha a cada deploy)
+dist/
+
+# Variáveis de ambiente / segredos — NUNCA sobem pro GitHub
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Netlify (cache local do CLI, se usar)
+.netlify/
