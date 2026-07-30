@@ -118,6 +118,5 @@ export default async (request) => {
   }
 }
 
-export const config = {
-  path: '/api/db',
-}
+// (Roteamento feito só pelo netlify.toml — sem config.path aqui, pra
+// evitar qualquer conflito entre as duas formas de rota.)
