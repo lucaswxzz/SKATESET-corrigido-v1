@@ -95,5 +95,6 @@ ${articleEntries.join('\n\n')}
   })
 }
 
-// (Roteamento feito só pelo netlify.toml — sem config.path aqui, pra
-// evitar qualquer conflito entre as duas formas de rota.)
+export const config = {
+  path: '/sitemap.xml',
+}
